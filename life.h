@@ -2,6 +2,7 @@
 #define LIFE_H
 
 #include <iostream>
+#include <fstream>
 #include <ncurses.h>
 #include <unistd.h>
 #include <thread>
@@ -15,6 +16,7 @@ using Board = int[__WORLD_HEIGHT__][__WORLD_WIDTH__];
 
 void rules();
 void fill(Board board);
+void fill_from_file(Board board, const std::string& pathToFile);
 void fill_rand(Board board);
 void show(const Board board);
 void showMe(const Board board);

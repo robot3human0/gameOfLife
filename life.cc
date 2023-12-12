@@ -1,9 +1,9 @@
 #include "life.h"
 
 void rules() {
-    std::cout << "PRESS \"q\" TO STOP THE GAME\n";
-    std::cout << "PRESS \"+\" TO SPEED-UP\n";
-    std::cout << "PRESS \"-\" TO SPEED-DOWN\n";
+    std::cout << "PRESS \"q\" TO STOP THE GAME\n\r";
+    std::cout << "PRESS \"+\" TO SPEED-UP\n\r";
+    std::cout << "PRESS \"-\" TO SPEED-DOWN\n\r";
 }
 
 void fill(Board board) {
@@ -39,7 +39,8 @@ void showMe(const Board board) {
         for (int j = 0; j < __WORLD_WIDTH__; ++j) {
             std::cout << board[i][j];
         }
-        std::cout << std::endl;
+        // std::cout << std::endl;
+        std::cout << "\n\r";
     }
 }
 
@@ -54,7 +55,9 @@ void show(const Board board) {
             }
         }
         std::cout << "\033[0m";
-        std::cout << std::endl;
+        // std::cout << std::endl;
+        std::cout << "\n\r";
+
     }
 }
 
@@ -97,4 +100,27 @@ int get_x(int i) {
 
 int get_y(int j) {
     return (__WORLD_WIDTH__ + j) % __WORLD_WIDTH__;
+}
+
+void fill_from_file(Board board, const std::string& pathToFile) {
+    std::ifstream file(pathToFile);
+    if (file.is_open()) {
+        for (int i = 0; i < __WORLD_HEIGHT__; ++i) {
+            // for (int j = 0; j < __WORLD_WIDTH__; ++j) {
+            //     if (file.get() == '1') std::cout << '1';
+            //     else if (file.get() == '0') {
+            //         std::cout << ' ';
+            //     }
+            //     // if (file.get() == '0') {
+            //     //     board[i][j] = 0;
+            //     // } else if (file.get() == '1') {
+            //     //     board[i][j] = 1;
+            //     // }
+            // }
+            std::cout << file.getline();
+        }
+        file.close();
+    } else {
+        throw std::string("pizdec");
+    }
 }
