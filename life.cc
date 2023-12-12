@@ -1,4 +1,4 @@
-#include "life_otus.h"
+#include "life.h"
 
 void rules() {
     std::cout << "PRESS \"q\" TO STOP THE GAME\n";

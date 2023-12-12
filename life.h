@@ -1,8 +1,8 @@
-#ifndef LIFE_OTUS_H
-#define LIFE_OTUS_H
+#ifndef LIFE_H
+#define LIFE_H
 
 #include <iostream>
-// #include <ncurses.h>
+#include <ncurses.h>
 #include <unistd.h>
 #include <thread>
 #include <chrono>
@@ -23,4 +23,4 @@ void copy(Board src, Board dst);
 int get_x(int i);
 int get_y(int j);
 
-#endif  // LIFE_OTUS_H
+#endif  // LIFE_H
