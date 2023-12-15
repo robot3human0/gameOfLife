@@ -55,7 +55,6 @@ void show(const Board board) {
             }
         }
         std::cout << "\033[0m";
-        // std::cout << std::endl;
         std::cout << "\n\r";
 
     }
@@ -106,18 +105,12 @@ void fill_from_file(Board board, const std::string& pathToFile) {
     std::ifstream file(pathToFile);
     if (file.is_open()) {
         for (int i = 0; i < __WORLD_HEIGHT__; ++i) {
-            // for (int j = 0; j < __WORLD_WIDTH__; ++j) {
-            //     if (file.get() == '1') std::cout << '1';
-            //     else if (file.get() == '0') {
-            //         std::cout << ' ';
-            //     }
-            //     // if (file.get() == '0') {
-            //     //     board[i][j] = 0;
-            //     // } else if (file.get() == '1') {
-            //     //     board[i][j] = 1;
-            //     // }
-            // }
-            std::cout << file.getline();
+            std::string s;
+            getline(file, s);
+            for (int j = 0; j < __WORLD_WIDTH__; ++j) {
+                if (s[j] == '1') board[i][j] = 1;
+                else if (s[j] == '0') board[i][j] = 0;
+            }
         }
         file.close();
     } else {
