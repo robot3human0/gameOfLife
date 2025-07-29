@@ -1,13 +1,7 @@
 #ifndef LIFE_H
 #define LIFE_H
 
-#include <iostream>
-#include <fstream>
-#include <ncurses.h>
-#include <unistd.h>
-#include <thread>
-#include <chrono>
-#include <cstdlib>
+#include <string>
 
 const int __WORLD_WIDTH__ = 80;
 const int __WORLD_HEIGHT__ = 25;

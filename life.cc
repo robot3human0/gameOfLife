@@ -1,5 +1,11 @@
 #include "life.h"
 
+#include <iostream>
+#include <fstream>
+#include <unistd.h>
+#include <thread>
+#include <cstdlib>
+
 void rules() {
     std::cout << "PRESS \"q\" TO STOP THE GAME\n\r";
     std::cout << "PRESS \"+\" TO SPEED-UP\n\r";
