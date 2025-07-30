@@ -120,6 +120,6 @@ void fill_from_file(Board board, const std::string& pathToFile) {
         }
         file.close();
     } else {
-        throw std::string("pizdec");
+        throw std::runtime_error("Oops! Failed to open the file: " + pathToFile);
     }
 }

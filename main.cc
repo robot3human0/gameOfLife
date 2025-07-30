@@ -8,7 +8,7 @@
 
 int main() {
     std::string s;
-    std::cout << "Введите путь до файла: ";
+    std::cout << "Enter path to the preset file: ";
     std::cin >> s;
     system("clear");
     Board board;
@@ -35,6 +35,3 @@ int main() {
     endwin();
     return 0;
 }
-
-// compile:
-// g++ main.cc life.cc -lncurses -o game_of_life
