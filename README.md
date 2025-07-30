@@ -50,3 +50,10 @@ The game stops if:
   * Add adjustable field size, and possibly zoom using mouse wheel or keyboard.
   * Allow changing cell and field colors, and maybe even add background music.
   * Export user-created models to a file.
+
+## 📦 Build
+
+```Bash
+make
+./game_of_life
+```
