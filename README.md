@@ -36,9 +36,6 @@ The game stops if:
 * The grid wraps around itself (toroidal): e.g., the bottom-right cell has the bottom-left as a right neighbor and the top-right as a bottom neighbor.
 * Initial state is loaded from stdin.
 
-glider_emblem
-
-
 ![glider_emblem](pics/glider_emblem.gif)
 
 ## ✅ Current result
